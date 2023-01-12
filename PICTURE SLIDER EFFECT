@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,8 +106,13 @@
         }
     </style>
 </head>
+
 <body>
-     <!--Slider-->
+
+
+
+
+    <!--Slider-->
     <div id="slider">
         <div class="slide" style="background:dodgerBlue;">
             <img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
@@ -136,34 +141,55 @@
     <div id="dots-con">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
     </div>
+
+
     <script type="text/javascript">
         var slides = document.querySelectorAll(".slide");
         var dots = document.querySelectorAll(".dot");
         var index = 0;
+
+
         function prevSlide(n) {
             index += n;
             console.log("prevSlide is called");
             changeSlide();
         }
+
         function nextSlide(n) {
             index += n;
             changeSlide();
         }
-         changeSlide();
-         function changeSlide() {
-         if (index > slides.length - 1)
+
+        changeSlide();
+
+        function changeSlide() {
+
+            if (index > slides.length - 1)
                 index = 0;
-          if (index < 0)
+
+            if (index < 0)
                 index = slides.length - 1;
-          for (let i = 0; i < slides.length; i++) {
+
+
+
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
 
                 dots[i].classList.remove("active");
-             }
+
+
+            }
 
             slides[index].style.display = "block";
             dots[index].classList.add("active");
-            }
-         </script>
+
+
+
+        }
+
+
+
+    </script>
 </body>
+
 </html>
